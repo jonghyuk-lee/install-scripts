@@ -22,5 +22,9 @@ if [ "$(grep '${HOME}/go' ~/.bash_profile)" == "" ]; then
     echo 'export GOPATH=${HOME}/go' >> ~/.bash_profile
 fi
 
+if [ "$(grep '${HOME}/go/bin' ~/.bash_profile)" == "" ]; then
+    echo 'export PATH=${HOME}/go/bin:${PATH}' >> ~/.bash_profile
+fi
+
 exit 0
 
